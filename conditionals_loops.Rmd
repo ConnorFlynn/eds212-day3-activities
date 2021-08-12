@@ -1,0 +1,97 @@
+---
+title: "Day 3 221 Practice Session"
+author: "Connor Flynn"
+date: "8/11/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+task 1
+
+```{r}
+pm2_5 <- 48
+
+if (pm2_5 < 100) {
+  print("low to moderate risk")
+} else if (pm2_5 <= 150){
+  print("unhealthy for sensitive groups")
+} else if (pm2_5 > 150){
+  print("health risk present")
+}
+ 
+```
+task 2
+```{r}
+species <- "blue whale"
+
+switch(species,
+       "blue whale" = print("You found a whale!"))
+
+
+
+
+```
+task 3
+
+```{r}
+max_airtemp_c <- 24.1
+
+if (max_airtemp_c > 27) {
+  print("temperature is too high")
+} else if(max_airtemp_c <= 27){
+  print("tmeperature is ok")
+}
+
+```
+task 4
+```{r}
+base_burrito <- 6.50
+main_ingredient <- "lobster" 
+
+if(main_ingredient == "veggie") {
+  cost_burrito <- base_burrito
+} else if (main_ingredient == "chicken"){
+  cost_burrito <- base_burrito + 3
+}  else if (main_ingredient == "steak") {
+  cost_burrito <- base_burrito + 3.25
+} else {cat("not on the menu")}
+
+
+```
+task 5 
+
+```{r}
+fish <- c(8, 10, 12, 13)
+fish_types <- c("goldfish", "tetras", "guppies", "mollies")
+
+fish_proportion_total <- vector(mode = "numeric", length = length(fish))
+
+for(i in seq_along(fish)) {
+  fish_proportion <- fish[i] / sum(fish)
+  fish_proportion_total[i] <- fish_proportion
+}
+names(fish_proportion_total) <- fish_types
+
+```
+
+
+
+
+
+
+task 6 
+
+```{r}
+month.name
+
+for(i in seq_along(month.name)) {
+  print(paste(month.name[i],"is month", i)) 
+}
+
+
+
+```
+
